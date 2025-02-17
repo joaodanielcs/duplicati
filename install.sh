@@ -1,6 +1,6 @@
 apt update
 apt upgrade -y
-apt install sudo -y
+apt install sudo curl -y
 DUPLICATI_URL="https://github.com/duplicati/duplicati/releases/latest"
 DUPLICATI_PACKAGE=$(curl -s $DUPLICATI_URL | grep -oP '(?<=href=")[^"]+\.deb')
 wget "https://github.com/duplicati/duplicati/releases/download/$DUPLICATI_PACKAGE" -O duplicati_latest.deb
