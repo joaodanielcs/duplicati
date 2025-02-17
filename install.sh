@@ -1,5 +1,5 @@
 apt update
-apt upgrade
+apt upgrade -y
 apt install sudo -y
 DUPLICATI_URL="https://github.com/duplicati/duplicati/releases/latest"
 DUPLICATI_PACKAGE=$(curl -s $DUPLICATI_URL | grep -oP '(?<=href=")[^"]+\.deb')
