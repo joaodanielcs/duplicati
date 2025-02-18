@@ -8,6 +8,7 @@ systemctl enable duplicati.service
 systemctl daemon-reload
 echo 'DAEMON_OPTS="--webservice-password='$pass' --webservice-interface=any --webservice-port=8200 --portable-mode"' | sudo tee /etc/default/duplicati
 systemctl start duplicati.service
+read -sp "Acesse o Duplicati Web e depois volte aqui e pressione enter: " 
 echo 'DAEMON_OPTS="--webservice-interface=any --webservice-port=8200 --portable-mode"' | sudo tee /etc/default/duplicati
 rm duplicati_latest.deb
 init 6
