@@ -1,7 +1,7 @@
 read -sp "Insira uma senha de acesso ao Duplicati: " pass
 apt update
 apt upgrade -y
-apt install sudo curl -y
+apt install sudo -y
 wget -q "https://updates.duplicati.com/stable/duplicati-2.1.0.4_stable_2025-01-31-linux-x64-gui.deb" -O duplicati_latest.deb
 sudo dpkg -i duplicati_latest.deb ; apt-get -f install -y
 systemctl enable duplicati.service
