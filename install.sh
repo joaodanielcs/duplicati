@@ -10,5 +10,6 @@ echo 'DAEMON_OPTS="--webservice-password='$pass' --webservice-interface=any --we
 systemctl start duplicati.service
 read -sp "Acesse o Duplicati Web e depois volte aqui e pressione enter: " 
 echo 'DAEMON_OPTS="--webservice-interface=any --webservice-port=8200 --portable-mode"' | sudo tee /etc/default/duplicati
-rm duplicati_latest.deb
+rm duplicati.deb
+mkdir -p /mnt/global/, /mnt/nas/, /mnt/profiles/
 init 6
